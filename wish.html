@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FF8FB1" />
+  <meta name="description" content="A little birthday surprise for Huma — open the card and celebrate 29 November 💗" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Huma's Birthday Card" />
+  <meta property="og:title" content="Huma's Birthday Card 🎂" />
+  <meta property="og:description" content="A little birthday surprise for Huma — open the card and celebrate 29 November 💗" />
+  <meta property="og:image" content="https://huma-birthday-card.vercel.app/assets/images/og-preview.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://huma-birthday-card.vercel.app/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Huma's Birthday Card 🎂" />
+  <meta name="twitter:description" content="A little birthday surprise for Huma — open the card and celebrate 29 November 💗" />
+  <meta name="twitter:image" content="https://huma-birthday-card.vercel.app/assets/images/og-preview.jpg" />
+
+  <title>Step 3 💌 | Huma's Birthday Card</title>
+  <link rel="stylesheet" href="style.css?v=14" />
+  <script src="script.js" defer></script>
+  <script src="indicators.js?v=2" defer></script>
+  <script src="wish.js?v=1" defer></script>
+</head>
+<body data-page="wish">
+  <canvas id="confetti" aria-hidden="true"></canvas>
+
+  <div class="floaties" aria-hidden="true">
+    <span class="floatie f1">💌</span>
+    <span class="floatie f3">✨</span>
+    <span class="floatie f5">🌸</span>
+    <span class="floatie f7">💖</span>
+  </div>
+
+  <main class="story-shell">
+    <div class="step-topbar">
+      <span class="step-brand">🎂 A card for Huma</span>
+      <span class="step-count">Step 3 of 5</span>
+    </div>
+    <div class="progress-dots" aria-hidden="true">
+      <span>⏳</span><span>🎂</span><span>💌</span><span>📸</span><span>🎉</span>
+    </div>
+
+    <article class="step-card">
+      <div class="card-inner">
+        <div class="section-heading">
+          <span class="kicker">For you, my love</span>
+          <h2 class="card-title">A letter from my heart 💌</h2>
+          <p class="card-subtitle">Open it only if you're ready to feel all the feels. 💗</p>
+        </div>
+
+        <div class="wish-stage">
+          <div class="envelope" id="envelope">
+            <div class="envelope-flap"></div>
+            <div class="envelope-body">
+              <span class="seal">❤️</span>
+              <p>Special delivery for Huma</p>
+              <small>Tap "Open my letter" below 💌</small>
+            </div>
+          </div>
+
+          <article class="letter" id="letter" aria-hidden="true">
+            <div class="letter-head">
+              <span>💕</span>
+              <h3>My Dearest Huma! ❤️🥹</h3>
+            </div>
+            <div class="letter-body">
+              <p class="lead">❤️🎂 Happy Birthday, My Beautiful Huma! 🥹🎀❤️</p>
+              <p>Happy Birthday to the girl who makes my world brighter just by being in it. ❤️😘</p>
+              <p>Huma, tum meri zindagi ka woh haseen hissa ho jiske liye main har roz shukar karta hoon. Tumhari muskurahat, tumhari baatein, aur tumhari presence — sab kuch mere liye bohot special hai. 🫶🏻❤️</p>
+              <p>Tum sirf meri girlfriend nahi ho, tum meri duaon ka woh jawab ho jo Allah ne bohot pyar se diya hai. Tumhein dekh kar dil ko sukoon milta hai. 🥹💕</p>
+              <p>May Allah bless you with endless happiness, good health, success, and a beautiful future. May your smile never fade, may all your dreams come true, and may Allah always protect you from every sadness and difficulty. 🤲🏻❤️</p>
+              <p>Main hamesha tumhare saath hoon — har khushi me, har mushkil me, aur har us lamhe me jab tumhein kisi ki zaroorat ho. I promise to always care for you and make you feel loved. 🫂❤️</p>
+              <p>I love you so much, Huma! ❤️😘 May we celebrate countless more birthdays together, filled with love, laughter, happiness, and unforgettable memories. 🥹🎂🎀</p>
+              <p>Stay happy, stay blessed, and keep smiling, my love! 👑❤️</p>
+              <p class="sign-off">Once Again, Happy Birthday, My Beautiful Huma! 🎉🎂❤️🫶🏻</p>
+            </div>
+            <div class="letter-foot">Yours, always ❤️</div>
+          </article>
+        </div>
+
+        <div class="wish-actions">
+          <button class="btn btn-primary" id="openWishBtn">Open my letter 💌</button>
+        </div>
+      </div>
+
+      <div class="step-footer">
+        <a class="btn btn-secondary" href="cover.html">⬅ Back</a>
+        <span class="step-hint">Next: our little memories 📸</span>
+        <a class="btn btn-primary" href="gallery.html">Next step 📸</a>
+      </div>
+    </article>
+  </main>
+</body>
+</html>

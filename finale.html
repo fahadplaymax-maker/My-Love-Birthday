@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FF8FB1" />
+  <meta name="description" content="A little birthday surprise for Huma — open the card and celebrate 29 November 💗" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Huma's Birthday Card" />
+  <meta property="og:title" content="Huma's Birthday Card 🎂" />
+  <meta property="og:description" content="A little birthday surprise for Huma — open the card and celebrate 29 November 💗" />
+  <meta property="og:image" content="https://huma-birthday-card.vercel.app/assets/images/og-preview.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://huma-birthday-card.vercel.app/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Huma's Birthday Card 🎂" />
+  <meta name="twitter:description" content="A little birthday surprise for Huma — open the card and celebrate 29 November 💗" />
+  <meta name="twitter:image" content="https://huma-birthday-card.vercel.app/assets/images/og-preview.jpg" />
+
+  <title>Step 5 🎂 | Huma's Birthday Card</title>
+  <link rel="stylesheet" href="style.css?v=14" />
+  <script src="script.js?v=2" defer></script>
+  <script src="indicators.js?v=2" defer></script>
+  <script src="finale.js?v=1" defer></script>
+  <script src="video.js?v=2" defer></script>
+</head>
+<body data-page="finale">
+  <canvas id="confetti" aria-hidden="true"></canvas>
+
+  <div class="floaties" aria-hidden="true">
+    <span class="floatie f1">🎈</span>
+    <span class="floatie f2">💖</span>
+    <span class="floatie f4">🎀</span>
+    <span class="floatie f6">✨</span>
+    <span class="floatie f8">🌸</span>
+  </div>
+
+  <main class="story-shell">
+    <div class="step-topbar">
+      <span class="step-brand">🎂 A card for Huma</span>
+      <span class="step-count">Step 5 of 5</span>
+    </div>
+    <div class="progress-dots" aria-hidden="true">
+      <span>⏳</span><span>🎂</span><span>💌</span><span>📸</span><span>🎉</span>
+    </div>
+
+    <section class="plain-section finale-card">
+      <div class="card-inner">
+        <div class="section-heading">
+          <span class="kicker">The last page of your card</span>
+        </div>
+
+        <span class="finale-emoji" aria-hidden="true">🎂</span>
+        <h2>Make a wish, Huma 🤲🏻</h2>
+        <p>Blow out the candles and let every dream come true. ✨</p>
+
+        <div class="finale-actions">
+          <button class="btn btn-primary" id="makeWishBtn">Make my wish 🎉</button>
+        </div>
+
+        <div class="finale-message" id="finaleMessage">
+          🤲🏻 May Allah bless you with endless happiness, health and success — today and always.<br />
+          I love you so much, Huma! ❤️🎂
+        </div>
+
+        <div class="video-wish" id="videoWish" aria-labelledby="videoWishTitle">
+          <h3 id="videoWishTitle">🎥 Record a video wish</h3>
+          <p>Camera aur mic se chhoti si yaad record karo. Stop dabate hi video save/download ho jayegi. 💾</p>
+
+          <div class="video-controls">
+            <button class="btn btn-primary" id="recordBtn">🎥 Start recording</button>
+            <button class="btn btn-secondary" id="saveVideoBtn" disabled>💾 Download again</button>
+          </div>
+
+          <div class="video-status" id="videoStatus" role="status" aria-live="polite">
+            Ready when you are — maximum 60 seconds.
+          </div>
+
+          <div class="video-stage" id="liveStage">
+            <video id="liveVideo" autoplay playsinline muted data-mirror="true"></video>
+          </div>
+
+          <div class="video-stage" id="savedStage">
+            <video id="savedVideo" controls playsinline></video>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-footer">
+        <a class="btn btn-secondary" href="gallery.html">⬅ Back</a>
+        <span class="step-hint">The end… for now 💗</span>
+        <a class="btn btn-primary" href="timer.html">Read again 🔁</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

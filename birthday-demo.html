@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FF8FB1" />
+  <meta name="description" content="A little birthday surprise for Huma — open the card and celebrate 29 November 💗" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Huma's Birthday Card" />
+  <meta property="og:title" content="Huma's Birthday Card 🎂" />
+  <meta property="og:description" content="A little birthday surprise for Huma — open the card and celebrate 29 November 💗" />
+  <meta property="og:image" content="https://huma-birthday-card.vercel.app/assets/images/og-preview.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://huma-birthday-card.vercel.app/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Huma's Birthday Card 🎂" />
+  <meta name="twitter:description" content="A little birthday surprise for Huma — open the card and celebrate 29 November 💗" />
+  <meta name="twitter:image" content="https://huma-birthday-card.vercel.app/assets/images/og-preview.jpg" />
+
+  <title>Demo — Happy Birthday, Huma! 🎉</title>
+  <link rel="stylesheet" href="style.css?v=14" />
+  <script src="script.js?v=2" defer></script>
+  <script src="timer.js?v=5" defer></script>
+  <script src="demo.js" defer></script>
+</head>
+<body data-page="timer">
+  <canvas id="confetti" aria-hidden="true"></canvas>
+
+  <main class="story-shell demo-shell">
+    <div class="step-topbar">
+      <span class="step-brand">🎂 A card for Huma</span>
+      <span class="step-count">Demo Preview ✨</span>
+    </div>
+    <div class="progress-dots" aria-hidden="true">
+      <span>⏳</span><span>🎂</span><span>💌</span><span>📸</span><span>🎉</span>
+    </div>
+
+    <section class="timer-section demo-section" id="demoSection">
+      <div class="timer-bg" aria-hidden="true"></div>
+
+      <div class="balloon-layer" id="balloonLayer" aria-hidden="true"></div>
+
+      <div class="demo-content">
+        <p class="eyebrow">⏳ The wait is over</p>
+        <h1>Happy Birthday <span>Huma!</span></h1>
+        <p class="timer-lead">It's finally your day, meri jaan. 🎉💗</p>
+
+        <div class="cake-scene demo-cake" aria-hidden="true">
+          <div class="sparkle s1">✦</div>
+          <div class="sparkle s2">✧</div>
+          <div class="sparkle s3">✦</div>
+          <div class="candles">
+            <div class="candle"><span class="flame"></span></div>
+            <div class="candle"><span class="flame"></span></div>
+            <div class="candle"><span class="flame"></span></div>
+          </div>
+          <div class="cake-layer layer-top"></div>
+          <div class="cake-layer layer-mid"></div>
+          <div class="cake-layer layer-base"></div>
+          <div class="cake-plate"></div>
+        </div>
+
+        <div class="countdown-timer demo-timer" id="countdownTimer" aria-label="Countdown finished">
+          <div class="timer-box"><span>00</span><small>Days</small></div>
+          <div class="timer-box"><span>00</span><small>Hours</small></div>
+          <div class="timer-box"><span>00</span><small>Minutes</small></div>
+          <div class="timer-box"><span>00</span><small>Seconds</small></div>
+        </div>
+
+        <p class="demo-done">🎉 Time's up — the celebration begins! 🎉</p>
+
+        <div class="pop-badge">
+          🎈 Balloons popped: <strong id="popCount">0</strong>
+          <span>— tap a balloon to pop it!</span>
+        </div>
+
+        <div class="timer-buttons">
+          <a class="btn btn-primary" href="cover.html">Open your card 💌</a>
+          <a class="btn btn-secondary" href="timer.html">⬅ Back to timer</a>
+        </div>
+      </div>
+    </section>
+
+    <p class="demo-note">👀 Demo preview — aapka timer 29 November ko isi screen me badlega.</p>
+  </main>
+</body>
+</html>

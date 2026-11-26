@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FF8FB1" />
+  <meta name="description" content="A little birthday surprise for Huma — open the card and celebrate 29 November 💗" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Huma's Birthday Card" />
+  <meta property="og:title" content="Huma's Birthday Card 🎂" />
+  <meta property="og:description" content="A little birthday surprise for Huma — open the card and celebrate 29 November 💗" />
+  <meta property="og:image" content="https://huma-birthday-card.vercel.app/assets/images/og-preview.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://huma-birthday-card.vercel.app/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Huma's Birthday Card 🎂" />
+  <meta name="twitter:description" content="A little birthday surprise for Huma — open the card and celebrate 29 November 💗" />
+  <meta name="twitter:image" content="https://huma-birthday-card.vercel.app/assets/images/og-preview.jpg" />
+
+  <title>Step 4 📸 | Huma's Birthday Card</title>
+  <link rel="stylesheet" href="style.css?v=14" />
+  <script src="script.js" defer></script>
+  <script src="indicators.js?v=2" defer></script>
+  <script src="gallery.js?v=1" defer></script>
+</head>
+<body data-page="gallery">
+  <canvas id="confetti" aria-hidden="true"></canvas>
+
+  <div class="floaties" aria-hidden="true">
+    <span class="floatie f2">💕</span>
+    <span class="floatie f4">🎀</span>
+    <span class="floatie f6">✨</span>
+    <span class="floatie f8">🌸</span>
+  </div>
+
+  <main class="story-shell">
+    <div class="step-topbar">
+      <span class="step-brand">🎂 A card for Huma</span>
+      <span class="step-count">Step 4 of 5</span>
+    </div>
+    <div class="progress-dots" aria-hidden="true">
+      <span>⏳</span><span>🎂</span><span>💌</span><span>📸</span><span>🎉</span>
+    </div>
+
+    <section class="plain-section">
+      <div class="card-inner">
+        <div class="section-heading">
+          <span class="kicker">Little moments, big feelings</span>
+          <h2 class="card-title">Memory Lane 📸</h2>
+          <p class="card-subtitle">A corner of the internet just for your smiles. 💗</p>
+        </div>
+
+        <div class="hint-box">
+          💡 Tap any photo to open it. Huma ki khas photos — har ek ke neeche ek chhoti yaad likhi hai. 🎈
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-card" data-note="Huma, your smile lights up my whole world 💗">
+            <img src="assets/images/huma-1.png" alt="Huma's birthday memory 1" decoding="async" width="844" height="881" />
+            <p>Huma, your smile lights up my whole world 💗</p>
+          </div>
+          <div class="gallery-card" data-note="Huma, you deserve all the magic in the world ✨">
+            <img src="assets/images/huma-2.png" alt="Huma's birthday memory 2" decoding="async" width="848" height="876" />
+            <p>Huma, you deserve all the magic in the world ✨</p>
+          </div>
+          <div class="gallery-card" data-note="Huma, you are my favorite person always 💕">
+            <img src="assets/images/huma-3.png" alt="Huma's birthday memory 3" decoding="async" width="836" height="882" />
+            <p>Huma, you are my favorite person always 💕</p>
+          </div>
+          <div class="gallery-card" data-note="Huma, may all your dreams come true 🤲🏻">
+            <img src="assets/images/huma-4.png" alt="Huma's birthday memory 4" decoding="async" width="848" height="874" />
+            <p>Huma, may all your dreams come true 🤲🏻</p>
+          </div>
+          <div class="gallery-card" data-note="Huma, here's to many more birthdays together 🎉">
+            <img src="assets/images/huma-5.png" alt="Huma's birthday memory 5" decoding="async" width="844" height="881" />
+            <p>Huma, here's to many more birthdays together 🎉</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-footer">
+        <a class="btn btn-secondary" href="wish.html">⬅ Back</a>
+        <span class="step-hint">Next: the final surprise 🎂</span>
+        <a class="btn btn-primary" href="finale.html">Next step 🎂</a>
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Memory preview">
+    <div class="lightbox-inner">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close preview">✕</button>
+      <span class="lightbox-emoji" id="lightboxEmoji"></span>
+      <img id="lightboxImg" alt="Birthday memory" style="display:none" />
+      <p id="lightboxNote"></p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FF8FB1" />
+  <meta name="description" content="A little birthday surprise for Huma — open the card and celebrate 29 November 💗" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Huma's Birthday Card" />
+  <meta property="og:title" content="Huma's Birthday Card 🎂" />
+  <meta property="og:description" content="A little birthday surprise for Huma — open the card and celebrate 29 November 💗" />
+  <meta property="og:image" content="https://huma-birthday-card.vercel.app/assets/images/og-preview.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://huma-birthday-card.vercel.app/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Huma's Birthday Card 🎂" />
+  <meta name="twitter:description" content="A little birthday surprise for Huma — open the card and celebrate 29 November 💗" />
+  <meta name="twitter:image" content="https://huma-birthday-card.vercel.app/assets/images/og-preview.jpg" />
+
+  <title>🎬 Record Huma's Journey</title>
+  <link rel="stylesheet" href="style.css?v=14" />
+  <script src="record.js?v=2" defer></script>
+</head>
+<body data-page="record">
+  <div class="record-shell">
+    <header class="record-topbar">
+      <span class="step-brand">🎬 Huma's birthday journey</span>
+      <span class="record-tip">Browser me “This tab” choose karein aur “Share tab audio” tick karein 🎵</span>
+      <a class="record-exit" href="timer.html" aria-label="Exit recorder">✖ Exit</a>
+    </header>
+
+    <div class="record-stage">
+      <iframe
+        id="journeyFrame"
+        src="timer.html?journey=1"
+        title="Huma's birthday card journey"
+        allow="autoplay; fullscreen; picture-in-picture"
+      ></iframe>
+    </div>
+
+    <div class="record-bar" id="recordBar">
+      <div class="record-status" id="recordStatus" role="status" aria-live="polite">
+        Ek baar tap karein — uske baad recording khud chalti rahegi.
+      </div>
+      <div class="record-actions">
+        <button class="btn btn-primary" id="saveBtn" hidden disabled>💾 Save recording</button>
+      </div>
+    </div>
+
+    <div class="record-gate" id="recordGate">
+      <div class="record-gate-card">
+        <div class="gate-icon" aria-hidden="true">🎬</div>
+        <h2>Journey Recording</h2>
+        <p>Ek baar tap karein. Uske baad recording khud chalti rahegi — aap bas card dekhte jao. Aakhri page par sirf <strong>Save recording</strong> button aaye ga.</p>
+        <button class="btn btn-primary" id="gateBtn">Tap to begin</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

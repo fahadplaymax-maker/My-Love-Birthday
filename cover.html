@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FF8FB1" />
+  <meta name="description" content="A little birthday surprise for Huma — open the card and celebrate 29 November 💗" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Huma's Birthday Card" />
+  <meta property="og:title" content="Huma's Birthday Card 🎂" />
+  <meta property="og:description" content="A little birthday surprise for Huma — open the card and celebrate 29 November 💗" />
+  <meta property="og:image" content="https://huma-birthday-card.vercel.app/assets/images/og-preview.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://huma-birthday-card.vercel.app/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Huma's Birthday Card 🎂" />
+  <meta name="twitter:description" content="A little birthday surprise for Huma — open the card and celebrate 29 November 💗" />
+  <meta name="twitter:image" content="https://huma-birthday-card.vercel.app/assets/images/og-preview.jpg" />
+
+  <title>Step 2 🎂 | Huma's Birthday Card</title>
+  <link rel="stylesheet" href="style.css?v=14" />
+  <script src="script.js?v=2" defer></script>
+  <script src="indicators.js?v=2" defer></script>
+  <script src="cover.js?v=4" defer></script>
+</head>
+<body data-page="home">
+  <canvas id="confetti" aria-hidden="true"></canvas>
+
+  <audio id="birthdayAudio" src="assets/audio/huma-birthday.mp3" preload="auto"></audio>
+
+  <div class="floaties" aria-hidden="true">
+    <span class="floatie f1">🎈</span>
+    <span class="floatie f2">💖</span>
+    <span class="floatie f3">✨</span>
+    <span class="floatie f4">🎀</span>
+    <span class="floatie f5">🌸</span>
+    <span class="floatie f6">💕</span>
+    <span class="floatie f7">⭐</span>
+    <span class="floatie f8">🫶🏻</span>
+  </div>
+
+  <main class="story-shell">
+    <div class="step-topbar">
+      <span class="step-brand">🎂 A card for Huma</span>
+      <span class="step-count">Step 2 of 5</span>
+    </div>
+    <div class="progress-dots" aria-hidden="true">
+      <span>⏳</span><span>🎂</span><span>💌</span><span>📸</span><span>🎉</span>
+    </div>
+
+    <section class="plain-section card-home celebration">
+      <div class="celebration-halo" aria-hidden="true"></div>
+
+      <div class="letter-balloons" role="img" aria-label="Happy Birthday Huma">
+        <div class="balloon-line">
+          <span class="letter-balloon">H</span>
+          <span class="letter-balloon">A</span>
+          <span class="letter-balloon">P</span>
+          <span class="letter-balloon">P</span>
+          <span class="letter-balloon">Y</span>
+          <span class="letter-balloon">B</span>
+          <span class="letter-balloon">I</span>
+          <span class="letter-balloon">R</span>
+          <span class="letter-balloon">T</span>
+          <span class="letter-balloon">H</span>
+          <span class="letter-balloon">D</span>
+          <span class="letter-balloon">A</span>
+          <span class="letter-balloon">Y</span>
+        </div>
+        <div class="balloon-line">
+          <span class="letter-balloon">H</span>
+          <span class="letter-balloon">U</span>
+          <span class="letter-balloon">M</span>
+          <span class="letter-balloon">A</span>
+        </div>
+      </div>
+
+      <div class="card-inner celebration-inner">
+        <div class="hero-text">
+          <p class="eyebrow">🎊 It's your special day 🎊</p>
+
+          <h1 class="celebration-title">
+            <span class="happy">Happy Birthday</span>
+            <span class="name">Huma</span>
+          </h1>
+
+          <p class="celebration-tagline">Today we celebrate the smile, the heart, the whole magic that is you. ✨</p>
+
+          <div class="badges">
+            <span class="badge badge-age">Turning <strong>22</strong> ✨</span>
+            <span class="badge badge-date">29 November 2004 🎂</span>
+          </div>
+
+          <div class="hero-actions">
+            <button class="btn btn-primary" id="blowBtn">🕯️ Blow the candles</button>
+            <button class="btn btn-secondary" id="musicBtn" aria-pressed="false">🎵 Play our song</button>
+          </div>
+
+          <p class="wish-message" id="wishMessage" aria-live="polite">
+            🤲🏻 Wish granted — may every dream of yours come true! 💗
+          </p>
+        </div>
+
+        <div class="hero-art">
+          <div class="glow-ring"></div>
+
+          <div class="cake-scene" id="cakeScene">
+            <div class="sparkle s1">✦</div>
+            <div class="sparkle s2">✧</div>
+            <div class="sparkle s3">✦</div>
+
+            <div class="cake-banner"><span>Happy</span> Birthday</div>
+
+            <div class="candles">
+              <div class="candle"><span class="flame"></span><span class="smoke"></span></div>
+              <div class="candle"><span class="flame"></span><span class="smoke"></span></div>
+              <div class="candle"><span class="flame"></span><span class="smoke"></span></div>
+            </div>
+
+            <div class="cake-layer layer-top"></div>
+            <div class="cake-layer layer-mid"></div>
+            <div class="cake-layer layer-base"></div>
+            <div class="cake-plate"></div>
+          </div>
+
+          <p class="art-caption">Blow the candles &amp; make a wish, Huma 🤲🏻</p>
+        </div>
+      </div>
+
+      <div class="step-footer">
+        <a class="btn btn-secondary" href="timer.html">⬅ Back</a>
+        <span class="step-hint">Turn the card to read your surprise ➡️</span>
+        <a class="btn btn-primary" href="wish.html?open=1">Next step 💌</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
