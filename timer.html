@@ -4,68 +4,53 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#FF8FB1" />
-  <meta name="description" content="A little birthday surprise for Huma — open the card and celebrate 29 November 💗" />
+  <meta name="description" content="A little birthday surprise for Huma � open the card and celebrate 29 November ??" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Huma's Birthday Card" />
-  <meta property="og:title" content="Huma's Birthday Card 🎂" />
-  <meta property="og:description" content="A little birthday surprise for Huma — open the card and celebrate 29 November 💗" />
+  <meta property="og:title" content="Huma's Birthday Card ??" />
+  <meta property="og:description" content="A little birthday surprise for Huma � open the card and celebrate 29 November ??" />
   <meta property="og:image" content="https://huma-birthday-card.vercel.app/assets/images/og-preview.jpg" />
   <meta property="og:image:type" content="image/jpeg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:url" content="https://huma-birthday-card.vercel.app/" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Huma's Birthday Card 🎂" />
-  <meta name="twitter:description" content="A little birthday surprise for Huma — open the card and celebrate 29 November 💗" />
+  <meta name="twitter:title" content="Huma's Birthday Card ??" />
+  <meta name="twitter:description" content="A little birthday surprise for Huma � open the card and celebrate 29 November ??" />
   <meta name="twitter:image" content="https://huma-birthday-card.vercel.app/assets/images/og-preview.jpg" />
 
-  <title>Step 1 ⏳ | Huma's Birthday Card</title>
+  <title>Step 1 ? | Huma's Birthday Card</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=19" />
-  <script src="timer.js?v=7" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=20" />
+  <script src="timer.js?v=6" defer></script>
 </head>
 <body data-page="timer" class="timer-only">
   <div class="timer-ambient" aria-hidden="true">
-    <div class="timer-aurora"></div>
     <span class="ambient-orb orb-a"></span>
     <span class="ambient-orb orb-b"></span>
     <span class="ambient-orb orb-c"></span>
-    <div class="timer-stars" id="timerStars"></div>
-    <div class="timer-floaters" id="timerFloaters"></div>
+    <span class="timer-sparkle ts1">?</span>
+    <span class="timer-sparkle ts2">?</span>
+    <span class="timer-sparkle ts3">?</span>
+    <span class="timer-sparkle ts4">?</span>
+    <span class="timer-sparkle ts5">?</span>
+    <span class="timer-sparkle ts6">?</span>
   </div>
 
-  <main class="timer-only-shell timer-reveal" aria-label="Birthday countdown">
-    <p class="timer-kicker"><span class="kicker-dot"></span>A little surprise for Huma <span class="kicker-heart">💗</span></p>
-    <h1 class="timer-heading"><span class="heading-shimmer">Your special day is almost here...</span></h1>
-    <p class="timer-sub">Every second is bringing you closer to something beautiful, Huma ✨</p>
-    <p class="timer-date-pill"><span class="pill-icon">🎂</span> 29 November 2026 <span class="pill-icon">✨</span></p>
+  <main class="timer-only-shell" aria-label="Birthday countdown">
+    <p class="timer-kicker">A little surprise for Huma ??</p>
+    <h1 class="timer-heading">Your special day is almost here...</h1>
+    <p class="timer-sub">Every moment is bringing you closer to your birthday surprise, Huma ?</p>
+    <p class="timer-date-pill">?? 29 November 2026</p>
 
     <div class="countdown-timer" id="countdownTimer" aria-live="polite">
-      <div class="timer-box" style="--d:0ms">
-        <div class="timer-box-glow"></div>
-        <span id="t-days">--</span>
-        <small>Days</small>
-      </div>
-      <div class="timer-box" style="--d:100ms">
-        <div class="timer-box-glow"></div>
-        <span id="t-hours">--</span>
-        <small>Hours</small>
-      </div>
-      <div class="timer-box" style="--d:200ms">
-        <div class="timer-box-glow"></div>
-        <span id="t-minutes">--</span>
-        <small>Minutes</small>
-      </div>
-      <div class="timer-box timer-seconds" style="--d:300ms">
-        <div class="timer-box-glow"></div>
-        <span id="t-seconds">--</span>
-        <small>Seconds</small>
-      </div>
+      <div class="timer-box"><span id="t-days">--</span><small>Days</small></div>
+      <div class="timer-box"><span id="t-hours">--</span><small>Hours</small></div>
+      <div class="timer-box"><span id="t-minutes">--</span><small>Minutes</small></div>
+      <div class="timer-box timer-seconds"><span id="t-seconds">--</span><small>Seconds</small></div>
     </div>
-
-    <p class="timer-tease" id="timerTease"><span class="tease-pulse"></span>Something magical is waiting for you...</p>
   </main>
 </body>
 </html>
