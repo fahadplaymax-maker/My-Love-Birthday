@@ -3178,3 +3178,465 @@ body.timer-only .timer-box.timer-seconds span { animation: secondsPulse 1s ease-
   .ambient-orb, .timer-sparkle, body.timer-only .timer-box.timer-seconds span { animation: none !important; }
   body.timer-only .timer-box { transition: none; }
 }
+/* ============================================================
+   OUR JOURNEY — new standalone block on the gallery page.
+   Everything is scoped to .journey-card so existing pages/design
+   are not touched.
+   ============================================================ */
+.journey-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  margin: 46px 0 10px;
+  padding: clamp(28px, 5vw, 52px) clamp(18px, 4vw, 44px);
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  background:
+    radial-gradient(circle at 12% 6%, rgba(255, 182, 210, 0.5), transparent 42%),
+    radial-gradient(circle at 88% 94%, rgba(203, 178, 255, 0.45), transparent 45%),
+    linear-gradient(150deg, rgba(255, 255, 255, 0.94), rgba(255, 245, 251, 0.88) 55%, rgba(243, 236, 255, 0.92));
+  box-shadow: 0 24px 60px rgba(122, 30, 74, 0.12), 0 2px 0 rgba(255, 255, 255, 0.9) inset;
+  text-align: center;
+}
+
+.journey-card::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -150px;
+  right: -100px;
+  width: 300px;
+  height: 300px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  box-shadow: 0 0 0 28px rgba(255, 255, 255, 0.13), 0 0 0 58px rgba(255, 255, 255, 0.09);
+  pointer-events: none;
+}
+
+.journey-card::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: -120px;
+  left: -90px;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 143, 177, 0.22), transparent 68%);
+  pointer-events: none;
+}
+
+.journey-head { position: relative; z-index: 1; }
+
+.journey-heart {
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff8fb1, #c44ce8);
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1;
+  box-shadow: 0 10px 24px rgba(212, 77, 130, 0.28), 0 2px 0 rgba(255, 255, 255, 0.7) inset;
+  animation: journeyHeart 2.8s ease-in-out infinite;
+}
+@keyframes journeyHeart { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.08); } }
+
+.journey-kicker {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 7px 18px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(255, 143, 177, 0.2);
+  color: #c94d7a;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.journey-title {
+  margin: 0;
+  font-family: 'Lobster', 'Trebuchet MS', cursive;
+  font-weight: 400;
+  font-size: clamp(1.9rem, 5vw, 3rem);
+  line-height: 1.2;
+  color: #d44d82;
+  background: linear-gradient(135deg, #e84b88 0%, #c44ce8 55%, #ff7eb3 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 3px 14px rgba(212, 77, 130, 0.18));
+}
+.journey-title span { font-size: 0.7em; }
+
+.journey-lead { margin-top: 10px; color: #8a6a94; font-size: 0.95rem; }
+
+.journey-line {
+  position: relative;
+  width: min(440px, 88%);
+  height: 2px;
+  margin: 26px auto 6px;
+  background: linear-gradient(90deg, transparent, rgba(255, 143, 177, 0.85), rgba(196, 167, 255, 0.85), transparent);
+}
+.journey-line span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 9px;
+  height: 9px;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: #fff;
+  border: 2px solid #ff8fb1;
+  border-radius: 2px;
+  box-shadow: 0 0 0 5px rgba(255, 143, 177, 0.12);
+}
+
+.journey-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.journey-stat {
+  min-width: 0;
+  padding: 18px 12px 16px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.76);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 8px 22px rgba(122, 30, 74, 0.07);
+  transition: opacity 0.55s ease, transform 0.55s cubic-bezier(0.2, 0.8, 0.25, 1), box-shadow 0.25s ease;
+}
+.journey-stat:hover { transform: translateY(-4px); box-shadow: 0 16px 30px rgba(122, 30, 74, 0.12); }
+
+@media (min-width: 720px) {
+  .journey-stat--hero { grid-column: span 2; }
+}
+
+.journey-num {
+  display: block;
+  font-weight: 800;
+  font-size: clamp(1.6rem, 3.4vw, 2.3rem);
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+  color: #d44d82;
+  background: linear-gradient(135deg, #e84b88, #c44ce8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.journey-num--hero { font-size: clamp(2.6rem, 6vw, 4rem); }
+.journey-num--md { font-size: clamp(1.4rem, 2.6vw, 1.9rem); }
+.journey-num--sm { font-size: clamp(1.2rem, 2.1vw, 1.6rem); }
+.journey-num--xs { font-size: clamp(1rem, 1.7vw, 1.35rem); }
+
+.journey-label {
+  display: block;
+  margin-top: 9px;
+  color: #8a6a94;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.journey-quote {
+  position: relative;
+  max-width: 640px;
+  margin: 36px auto 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  font-size: clamp(1.05rem, 2.5vw, 1.45rem);
+  line-height: 1.7;
+  color: #6b4a7a;
+}
+.journey-quote-mark {
+  display: block;
+  height: 42px;
+  font-size: 4.5rem;
+  line-height: 1;
+  color: rgba(255, 143, 177, 0.6);
+}
+
+/* Reveal only while JS is running; without JS everything stays visible. */
+.journey-card.js-journey .journey-head,
+.journey-card.js-journey .journey-line,
+.journey-card.js-journey .journey-stat,
+.journey-card.js-journey .journey-quote {
+  opacity: 0;
+  transform: translateY(14px);
+}
+.journey-card.js-journey.visible .journey-head,
+.journey-card.js-journey.visible .journey-line,
+.journey-card.js-journey.visible .journey-stat,
+.journey-card.js-journey.visible .journey-quote {
+  opacity: 1;
+  transform: none;
+}
+.journey-head, .journey-line, .journey-quote {
+  transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.2, 0.8, 0.25, 1);
+}
+.journey-card.js-journey.visible .journey-stat:nth-child(2) { transition-delay: 0.06s; }
+.journey-card.js-journey.visible .journey-stat:nth-child(3) { transition-delay: 0.12s; }
+.journey-card.js-journey.visible .journey-stat:nth-child(4) { transition-delay: 0.18s; }
+.journey-card.js-journey.visible .journey-stat:nth-child(5) { transition-delay: 0.24s; }
+.journey-card.js-journey.visible .journey-stat:nth-child(6) { transition-delay: 0.30s; }
+.journey-card.js-journey.visible .journey-stat:nth-child(7) { transition-delay: 0.36s; }
+.journey-card.js-journey.visible .journey-quote { transition-delay: 0.42s; }
+
+@media (max-width: 560px) {
+  .journey-card { margin-top: 36px; border-radius: 24px; }
+  .journey-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .journey-stat { padding: 14px 8px; }
+  .journey-num--hero { font-size: 2.4rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .journey-card, .journey-card * { animation: none !important; transition: none !important; }
+}
+
+/* Journey — opening whisper line (added on top of the card) */
+.journey-whisper {
+  position: relative;
+  z-index: 1;
+  max-width: 42ch;
+  margin: 0 auto 20px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  font-size: clamp(0.92rem, 2.2vw, 1.08rem);
+  line-height: 1.65;
+  color: #a4527c;
+  text-wrap: balance;
+}
+.journey-card.js-journey .journey-whisper {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.2, 0.8, 0.25, 1);
+}
+.journey-card.js-journey.visible .journey-whisper { opacity: 1; transform: none; }
+
+/* ============================================================
+   OUR JOURNEY — LAYOUT V2 (overrides the earlier journey styles)
+   Desktop: story on the left, live numbers on the right.
+   Mobile: a clean single column. Nothing outside .journey-card.
+   ============================================================ */
+
+.journey-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas:
+    "whisper"
+    "head"
+    "line"
+    "stats"
+    "quote";
+  padding: clamp(26px, 4vw, 46px) clamp(18px, 4vw, 44px);
+  background:
+    radial-gradient(circle at 8% 4%, rgba(255, 182, 210, 0.55), transparent 40%),
+    radial-gradient(circle at 95% 96%, rgba(203, 178, 255, 0.5), transparent 42%),
+    radial-gradient(circle at 55% 45%, rgba(255, 255, 255, 0.65), transparent 60%),
+    linear-gradient(150deg, rgba(255, 255, 255, 0.95), rgba(255, 243, 250, 0.9) 55%, rgba(242, 234, 255, 0.94));
+  box-shadow: 0 30px 70px rgba(122, 30, 74, 0.14), 0 2px 0 rgba(255, 255, 255, 0.9) inset;
+}
+
+.journey-whisper { grid-area: whisper; }
+.journey-head { grid-area: head; }
+.journey-line { grid-area: line; }
+.journey-stats { grid-area: stats; }
+.journey-quote { grid-area: quote; }
+
+/* ---------- opening whisper ---------- */
+.journey-whisper {
+  max-width: 46ch;
+  margin: 0 auto 26px;
+  color: #a4527c;
+  font-size: clamp(0.95rem, 2.2vw, 1.1rem);
+}
+.journey-whisper::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 2px;
+  margin: 14px auto 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent, #ff8fb1, transparent);
+}
+
+/* ---------- story column ---------- */
+.journey-heart { position: relative; }
+.journey-heart::after {
+  content: "";
+  position: absolute;
+  inset: -9px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 143, 177, 0.4);
+  animation: journeyRing 2.8s ease-out infinite;
+}
+@keyframes journeyRing {
+  0% { transform: scale(0.88); opacity: 0.85; }
+  100% { transform: scale(1.35); opacity: 0; }
+}
+
+.journey-dates {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 22px;
+}
+.journey-dates span {
+  padding: 6px 13px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(255, 143, 177, 0.25);
+  color: #a4527c;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+.journey-dates i {
+  flex: 1 1 34px;
+  min-width: 24px;
+  height: 1px;
+  background: repeating-linear-gradient(90deg, rgba(212, 77, 130, 0.45) 0 5px, transparent 5px 10px);
+}
+
+/* ---------- numbers column ---------- */
+.journey-stats {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 18px;
+  align-content: center;
+}
+
+.journey-stat {
+  position: relative;
+  overflow: hidden;
+  padding: 16px 10px 14px;
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.96), rgba(255, 246, 251, 0.82));
+  box-shadow: 0 10px 24px rgba(122, 30, 74, 0.07), 0 1px 0 rgba(255, 255, 255, 1) inset;
+}
+.journey-stat::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 18%;
+  right: 18%;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent, rgba(255, 143, 177, 0.75), transparent);
+}
+
+.journey-stat--hero {
+  background: linear-gradient(135deg, rgba(255, 235, 245, 0.96), rgba(243, 232, 255, 0.92));
+}
+.journey-stat--hero::after {
+  content: "\2661";
+  position: absolute;
+  top: 2px;
+  right: 14px;
+  font-size: 3.6rem;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.75);
+  pointer-events: none;
+}
+
+.journey-num { font-size: clamp(1.5rem, 2.6vw, 2rem); }
+.journey-num--hero { font-size: clamp(2.8rem, 5vw, 3.8rem); }
+.journey-num--md { font-size: clamp(1.25rem, 2.1vw, 1.6rem); }
+.journey-num--sm { font-size: clamp(1.05rem, 1.8vw, 1.35rem); }
+.journey-num--xs { font-size: clamp(0.92rem, 1.5vw, 1.15rem); }
+.journey-label { margin-top: 7px; font-size: 0.66rem; letter-spacing: 0.12em; }
+
+/* ---------- closing letter ---------- */
+.journey-quote {
+  max-width: none;
+  margin: 26px auto 0;
+  padding: 20px clamp(16px, 3vw, 30px);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid rgba(255, 255, 255, 0.92);
+  box-shadow: 0 10px 30px rgba(122, 30, 74, 0.06);
+}
+.journey-quote-mark {
+  height: auto;
+  margin-bottom: 8px;
+  font-size: 3.2rem;
+  line-height: 0.8;
+}
+
+/* ---------- desktop editorial split ---------- */
+@media (min-width: 860px) {
+  .journey-card {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    grid-template-areas:
+      "whisper whisper"
+      "head    stats"
+      "line    line"
+      "quote   quote";
+    column-gap: clamp(30px, 4vw, 56px);
+    padding: clamp(34px, 4vw, 54px) clamp(30px, 4vw, 56px);
+  }
+  .journey-whisper { margin-bottom: 34px; }
+  .journey-head { text-align: left; align-self: center; }
+  .journey-heart { margin-left: 0; }
+  .journey-kicker { margin-top: 2px; }
+  .journey-title { font-size: clamp(2.2rem, 4vw, 3.2rem); }
+  .journey-lead { max-width: 30ch; }
+  .journey-dates { justify-content: flex-start; }
+  .journey-stats { margin-top: 0; }
+  .journey-line { margin: 32px auto 0; }
+}
+
+/* ---------- gentle stagger inside the story column ---------- */
+.journey-card.js-journey .journey-head > * {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.55s ease, transform 0.55s cubic-bezier(0.2, 0.8, 0.25, 1);
+}
+.journey-card.js-journey.visible .journey-head > * { opacity: 1; transform: none; }
+.journey-card.js-journey.visible .journey-heart { transition-delay: 0.04s; }
+.journey-card.js-journey.visible .journey-kicker { transition-delay: 0.1s; }
+.journey-card.js-journey.visible .journey-title { transition-delay: 0.16s; }
+.journey-card.js-journey.visible .journey-lead { transition-delay: 0.22s; }
+.journey-card.js-journey.visible .journey-dates { transition-delay: 0.28s; }
+
+@media (max-width: 859px) {
+  .journey-line { margin-bottom: 20px; }
+}
+
+@media (max-width: 400px) {
+  .journey-stats { gap: 8px; }
+  .journey-stat { padding: 13px 6px 12px; }
+}
+
+/* Journey V3 — fine tuning the editorial layout */
+.journey-quote {
+  width: 100%;
+  margin: 26px 0 0;
+}
+@media (min-width: 860px) {
+  .journey-card { grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); }
+  .journey-title { font-size: clamp(2rem, 3.5vw, 2.9rem); }
+}
+
+/* Journey — bigger opening whisper */
+.journey-whisper {
+  max-width: 52ch;
+  margin-bottom: 30px;
+  font-size: clamp(1.05rem, 2.6vw, 1.35rem);
+  font-weight: 500;
+  color: #9c4670;
+}
+.journey-whisper::after {
+  width: 90px;
+  margin-top: 16px;
+}
+@media (min-width: 860px) {
+  .journey-whisper { margin-bottom: 38px; }
+}
